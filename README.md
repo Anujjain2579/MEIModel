@@ -41,21 +41,21 @@ For each name we:
   - **Turnover rate** (full round-trips per month)  
   - **Average holding period**
 
-| Symbol | Trades | Sharpe | Max DD   | Turnover/mo | Avg Hold (mo) |
-|:------:|:------:|:------:|:--------:|:-----------:|:-------------:|
-| BEP    | 29     | 0.48   | –41.7%   | 0.121       | 7.93          |
-| CWEN   | 12     | 0.36   | –52.3%   | 0.095       | 9.67          |
-| DNNGY  | 11     | 0.25   | –66.0%   | 0.115       | 7.91          |
-| NEE    | 30     | 0.40   | –52.0%   | 0.098       | 8.97          |
-| ADM    | 12     | 0.47   | –55.4%   | 0.038       | 22.42         |
-| BG     | 12     | 0.45   | –67.8%   | 0.041       | 22.42         |
-| DAR    | 12     | 0.60   | –77.5%   | 0.038       | 22.42         |
+| Symbol | Trades | Sharpe | Max DD   | Turnover/mo | Avg Hold (mo) | Buy&Hold Sharpe |
+|:------:|:------:|:------:|:--------:|:-----------:|:-------------:|:---------------:|
+| BEP    | 29     | 0.48   | –41.7%   | 0.121       | 7.93          | 0.32
+| CWEN   | 12     | 0.36   | –52.3%   | 0.095       | 9.67          | 0.13
+| DNNGY  | 11     | 0.25   | –66.0%   | 0.115       | 7.91          | 0.012
+| NEE    | 30     | 0.40   | –52.0%   | 0.098       | 8.97          | 0.61
+| ADM    | 12     | 0.47   | –55.4%   | 0.038       | 22.42         | 0.36
+| BG     | 12     | 0.45   | –67.8%   | 0.041       | 22.42         | 0.36
+| DAR    | 12     | 0.60   | –77.5%   | 0.038       | 22.42         | 0.43
 
 
 ## 6. Key Takeaways  
 - MEI is a **strongly persistent** monthly series; a mid-lag AR captures most of its dynamics. SARIMAX also works
 - A simple **hysteresis** on the SARIMAX forecast produces a manageable signal with limited churn.  
 - **Performance varies** by ticker:  
-  - Better Sharpe than Buy & Hold: BEP 0.48 (vs 0.32), CWEN 0.36 (vs 0.13), DNNGY 0.25 (vs 0.012)
+  - Better Sharpe than Buy & Hold: BEP 0.48 (vs 0.32), CWEN 0.36 (vs 0.13), DNNGY 0.25 (vs 0.012), ADM 0.47 (vs 0.36), BG 0.45 (vs 0.36), DAR 0.6 (vs 0.43)
   - Poor:  NEE 0.4 (vs 0.61)  
 - **Next steps** could include regime-switching models, threshold optimization, and integration of fundamental/seasonal demand indicators.
