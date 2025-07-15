@@ -1,5 +1,5 @@
 ## 1. Data Preparation  
-We assembled two time series:  
+We assembled three time series:  
 - **Multivariate ENSO Index (MEI).**  
   - Loaded monthly MEI from 1979 onward, parsed dates, and forced a consistent month‐start frequency.  
 - **Renewable‐energy stock prices.**  
